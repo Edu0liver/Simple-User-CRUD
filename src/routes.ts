@@ -1,7 +1,6 @@
 import express from "express";
+import { usersRouter } from "./users/routes/users.routes";
 
 export const router = express.Router();
 
-const getUsersController = new GetUsersController();
-
-router.get("/", getUsersController.handle);
+router.use(usersRouter);
